@@ -18,8 +18,7 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 
-GEMINI_API_KEY = "AIzaSyBd2mF7Fd7rF0lflJuq4CgPL1T9Kc11Ebo"
-# AIzaSyCEHtmzV2npqLU432d0QrnkXs5qDBFUmeI
+GEMINI_API_KEY = "YOUR API KEY"
 genai.configure(api_key=GEMINI_API_KEY)
 
 def query_mistral(prompt, timeout=5):
@@ -39,7 +38,6 @@ def query_mistral(prompt, timeout=5):
     except Exception:
         return None
 
-# Function to query Gemini API
 def query_gemini(prompt):
     try:
         model = genai.GenerativeModel("gemini-1.5-flash")
@@ -48,7 +46,6 @@ def query_gemini(prompt):
     except Exception:
         return "Both Mistral and Gemini failed."
 
-# API endpoint to get AI response
 @api_view(['POST'])
 def get_response(request):
     prompt = request.data.get("prompt", "")
@@ -66,13 +63,11 @@ class RegisterView(APIView):
         """
         Handle user registration manually, no DRF serializer.
         """
-        # Extract fields from request.data
         username = request.data.get('username')
         email = request.data.get('email')
         password = request.data.get('password')
         password2 = request.data.get('password2')
 
-        # Basic validation
         if not username or not password or not password2:
             return Response(
                 {'error': 'Username, password, and password2 are required.'},
@@ -84,14 +79,12 @@ class RegisterView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Check if user already exists
         if User.objects.filter(username=username).exists():
             return Response(
                 {'error': 'Username already taken.'},
                 status=status.HTTP_400_BAD_REQUEST
             )
-
-        # Create user
+        
         user = User.objects.create_user(
             username=username,
             email=email,
@@ -114,17 +107,15 @@ class LoginView(APIView):
         username = request.data.get('username')
         password = request.data.get('password')
 
-        # Basic validation
         if not username or not password:
             return Response(
                 {'error': 'Username and password are required.'},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Authenticate
+
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            # Log the user in (creates a session)
             login(request, user)
             return Response({'message': 'Login successful.'}, status=status.HTTP_200_OK)
         else:
@@ -139,21 +130,18 @@ def code_review(request):
             return JsonResponse({'feedback': 'No file uploaded.'}, status=400)
 
         try:
-            # Read the file content (assuming it's UTF-8 encoded)
             file_content = code_file.read().decode('utf-8')
         except Exception as e:
             return JsonResponse({'feedback': 'Error reading file.'}, status=500)
-
-        # Send the code to Gemini API (replace with your actual API endpoint and parameters)
         try:
-            gemini_api_url = 'https://api.gemini.example.com/code-review/'  # Replace with actual endpoint
+            gemini_api_url = 'NOT YET CREATED'
             payload = {'code': file_content}
-            headers = {'Content-Type': 'application/json'}  # Add auth headers if required
+            headers = {'Content-Type': 'application/json'}
 
             gemini_response = requests.post(
                 gemini_api_url, data=json.dumps(payload), headers=headers
             )
-            gemini_response.raise_for_status()  # Raise an exception for bad status codes
+            gemini_response.raise_for_status()
 
             gemini_data = gemini_response.json()
             feedback = gemini_data.get('feedback', 'No feedback provided.')
@@ -172,11 +160,9 @@ def explain_code(request):
             code = data.get("code", "").strip()
             if not code:
                 return JsonResponse({"explanation": "No code provided."}, status=400)
-            
-            # Prepare payload for Gemini API (update URL and parameters as needed)
-            gemini_api_url = "https://api.gemini.example.com/explain-code/"  # Replace with actual endpoint
+            gemini_api_url = "API Endpoint"  
             payload = {"code": code}
-            headers = {"Content-Type": "application/json"}  # Include authentication headers if needed
+            headers = {"Content-Type": "application/json"} 
 
             gemini_response = requests.post(gemini_api_url, data=json.dumps(payload), headers=headers)
             gemini_response.raise_for_status()
@@ -191,7 +177,7 @@ def explain_code(request):
         return JsonResponse({"explanation": "Invalid request method."}, status=405)
 
 
-# views.py
+
 import json
 import requests
 from django.http import JsonResponse
@@ -214,7 +200,7 @@ def translate_code(request):
                 "source_language": source_lang,
                 "target_language": target_lang,
             }
-            headers = {"Content-Type": "application/json"}  # Include authentication headers if required
+            headers = {"Content-Type": "application/json"} 
 
             gemini_response = requests.post(
                 gemini_api_url, data=json.dumps(payload), headers=headers
