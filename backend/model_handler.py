@@ -27,4 +27,3 @@ def get_response(prompt, model="starcoder"):
 
     else:
         return "Invalid model selection"
-     
