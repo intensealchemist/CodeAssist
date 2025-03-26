@@ -22,28 +22,27 @@ To run this project, you need the following:
 ## Setup Instructions
 
 1. Clone the repository:
-    ```
     git clone https://github.com/intensealchemist/CodeAssist.git
-    ```
+
 
 2. Navigate to the project directory:
-    ```
+    
     cd CodeAssist
-    ```
+    
 
 3. Install the necessary dependencies using your preferred package manager. For example, using npm:
-    ```
+    
     npm install
-    ```
+    
 
 4. Make sure you have llama.cpp GGUF set up and configured as per the project requirements.
 
 ## Running the Project
 
 After setting up the prerequisites and installing the dependencies, you can run the project using:
-```
+
 npm start
-```
+
 
 ## Contributing
 
@@ -52,4 +51,4 @@ Feel free to fork this project, make improvements, and send a pull request. We a
 ## License
 
 This project is licensed under the MIT License.
-```
+
