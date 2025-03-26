@@ -53,5 +53,3 @@ Feel free to fork this project, make improvements, and send a pull request. We a
 
 This project is licensed under the MIT License.
 ```
-
-You can create the README file by copying the above content into a file named `README.md` in your project directory.
