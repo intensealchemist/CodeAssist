@@ -40,23 +40,7 @@ To install and run CodeAssist locally, follow these steps:
 
 ## Usage
 
-Once the application is running, you can interact with CodeAssist through the command line or web interface. Here are a few example commands:
-
-- **Generate Code:**
-  ```javascript
-  // Example: Generate a function to add two numbers in JavaScript
-  ```
-
-- **Debug Code:**
-  ```javascript
-  // Example: Find an error in the provided JavaScript code
-  ```
-
-- **Review Code:**
-  ```javascript
-  // Example: Review the following CSS code for best practices
-  ```
-
+Once the application is running, you can interact with CodeAssist through the web interface. 
 ## Contributing
 
 We welcome contributions from the community! To contribute, follow these steps:
