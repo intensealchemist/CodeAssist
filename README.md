@@ -10,6 +10,7 @@ This project is a generative AI chatbot fine-tuned for coding.
 To run this project, you need the following:
 
 - llama.cpp GGUF
+- Gemini API Key
 
 ## Languages Used
 
