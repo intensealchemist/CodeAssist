@@ -22,17 +22,17 @@ To run this project, you need the following:
 ## Setup Instructions
 
 1. Clone the repository:
-    ```sh
+    ```
     git clone https://github.com/intensealchemist/CodeAssist.git
     ```
 
 2. Navigate to the project directory:
-    ```sh
+    ```
     cd CodeAssist
     ```
 
 3. Install the necessary dependencies using your preferred package manager. For example, using npm:
-    ```sh
+    ```
     npm install
     ```
 
@@ -41,7 +41,7 @@ To run this project, you need the following:
 ## Running the Project
 
 After setting up the prerequisites and installing the dependencies, you can run the project using:
-```sh
+```
 npm start
 ```
 
