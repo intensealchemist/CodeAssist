@@ -1,54 +1,82 @@
-
-
 ```markdown
 # CodeAssist
 
-This project is a generative AI chatbot fine-tuned for coding. 
+CodeAssist is a generative AI chatbot fine-tuned for coding. It assists developers by providing code suggestions, debugging tips, and more.
 
-## Prerequisites
+## Table of Contents
 
-To run this project, you need the following:
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-- llama.cpp GGUF
-- Gemini API Key
+## Features
 
-## Languages Used
+- Code generation for JavaScript, CSS, Python, and HTML
+- Debugging assistance
+- Code review suggestions
+- Documentation generation
 
-- JavaScript: 47.7%
-- CSS: 25.5%
-- Python: 24%
-- HTML: 2.8%
+## Installation
 
-## Setup Instructions
+To install and run CodeAssist locally, follow these steps:
 
-1. Clone the repository:
-    git clone https://github.com/intensealchemist/CodeAssist.git
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/intensealchemist/CodeAssist.git
+   cd CodeAssist
+   ```
 
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
 
-2. Navigate to the project directory:
-    
-    cd CodeAssist
-    
+3. **Run the Application:**
+   ```bash
+   npm start
+   ```
 
-3. Install the necessary dependencies using your preferred package manager. For example, using npm:
-    
-    npm install
-    
+## Usage
 
-4. Make sure you have llama.cpp GGUF set up and configured as per the project requirements.
+Once the application is running, you can interact with CodeAssist through the command line or web interface. Here are a few example commands:
 
-## Running the Project
+- **Generate Code:**
+  ```javascript
+  // Example: Generate a function to add two numbers in JavaScript
+  ```
 
-After setting up the prerequisites and installing the dependencies, you can run the project using:
+- **Debug Code:**
+  ```javascript
+  // Example: Find an error in the provided JavaScript code
+  ```
 
-npm start
-
+- **Review Code:**
+  ```javascript
+  // Example: Review the following CSS code for best practices
+  ```
 
 ## Contributing
 
-Feel free to fork this project, make improvements, and send a pull request. We appreciate all contributions!
+We welcome contributions from the community! To contribute, follow these steps:
+
+1. **Fork the Repository**
+2. **Create a Feature Branch:**
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. **Commit Your Changes:**
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. **Push to the Branch:**
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. **Open a Pull Request**
 
 ## License
 
-This project is licensed under the MIT License.
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
