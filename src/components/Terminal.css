@@ -1,0 +1,28 @@
+.terminal {
+    background: #000;
+    color: #07c5ff;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(27, 235, 250, 0.5);
+    min-height: 150px;
+    position: relative;
+    margin: 20px 0;
+  }
+  
+  .terminal-line {
+    margin: 5px 0;
+  }
+  
+  .cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  

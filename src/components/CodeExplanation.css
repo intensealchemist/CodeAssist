@@ -1,0 +1,43 @@
+.code-explanation {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    color: #eee;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .code-input {
+    width: 100%;
+    padding: 10px;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: inherit;
+    margin-bottom: 10px;
+  }
+  
+  .explain-button {
+    padding: 10px 15px;
+    background: #00ffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+    transition: background 0.3s;
+  }
+  
+  .explain-button:hover {
+    background: #1affff;
+  }
+  
+  .explanation-output {
+    margin-top: 20px;
+    background: #121212;
+    padding: 15px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+  }
+  

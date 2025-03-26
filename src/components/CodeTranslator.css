@@ -1,0 +1,75 @@
+.code-translator-container {
+    margin: 20px 0;
+    padding: 20px;
+    background: #1f1f1f;
+    border-radius: 8px;
+    color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .code-translator-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    background: #2a2a2a;
+    border: none;
+    color: #fff;
+    font-family: inherit;
+    margin-bottom: 15px;
+  }
+  
+  .translator-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .translator-options label {
+    margin-right: 5px;
+  }
+  
+  select {
+    padding: 5px;
+    border-radius: 4px;
+    background: #2a2a2a;
+    border: none;
+    color: #fff;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background: #00ffff;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  button:disabled {
+    background: #007777;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    margin-top: 10px;
+    color: #ff4d4d;
+    text-align: center;
+  }
+  
+  .translated-code-output {
+    margin-top: 20px;
+    padding: 15px;
+    background: #121212;
+    border-radius: 4px;
+    white-space: pre-wrap;
+  }
+  

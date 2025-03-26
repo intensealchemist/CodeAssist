@@ -1,0 +1,314 @@
+/* Global Styles & Reset */
+
+  
+  html, body {
+    width: auto;
+    height: auto;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Center the Main Container on the Page */
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Container */
+  .container {
+    width: 5000px;
+    top: 40px;
+    
+    padding: 10px;
+    background: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+  
+  /* Login Button (Symbol-based) - Positioned on Top-Right */
+  .login-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #0ff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    color: #0cc;
+  }
+  
+  /* Logout Button - Positioned on Top-Left */
+ /* Logout Button - Positioned on Top-Right with Neon Orange */
+.logout-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #0ff;  /* Neon Orange */
+    color: #191616;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    box-shadow: 0 0 10px #0ff;
+  }
+  
+  .logout-btn:hover {
+    background-color: #f8f8fa;
+  }
+  
+  
+  /* Neon Glow Header */
+  .neon-glow {
+    font-size: 2.5rem;
+    text-align: center;
+    
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 40px #0ff;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    margin-bottom: 10px;
+  }
+  
+  /* Input Box (Textarea) */
+  .input-box {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 2px solid #0ff;
+    right:20px;
+    border-radius: 4px;
+    background: #333;
+    color: #f5ebeb;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input-box:focus {
+    border-color: #0ff;
+    box-shadow: 0 0 8px #0ff;
+  }
+  
+  /* Submit Button */
+  .submit-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: rgb(1, 23, 23);
+    background: transparent;
+    border: 2px solid #0ff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: rgb(64, 249, 249);
+    color: #222;
+  }
+  
+  /* Loader (inside submit button) */
+  .loader {
+    border: 4px solid #0f0101;
+    border-top: 4px solid rgb(1, 17, 17);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error Message */
+  .error-message {
+    color: #ff4d4d;
+    background: #330000;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+  
+  /* Response Box */
+  .response-box {
+    background: #1a1a1a;
+    border: 2px solid rgb(19, 248, 248);
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+  
+  /* Code Highlighter Overrides */
+  .code-highlighter {
+    border-radius: 4px;
+    padding: 15px;
+    background: #222 !important;
+    font-size: 0.9rem;
+  }
+  
+  /* Copy Button */
+  .copy-btn {
+    background: #0ff;
+    color: #222;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .copy-btn:hover {
+    background: #0cc;
+    color: #0b0101;
+  }
+  
+  .text-cyan-400 {
+    color: #0ff;
+  }
+  
+  .text-cyan-300 {
+    color: #66ffe0;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  
+  /* Utility Margin Classes */
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
+  .mt-6 {
+    margin-top: 1.5rem;
+  }
+  
+
+
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  /* Style navigation menu links */
+  .topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .hamburger {
+    position: absolute;
+    top:40px;
+    right: 10px;
+    cursor: pointer;
+    
+    z-index: 1000;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background-color: #111;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+    width: 250px;  /* Set width for proper layout */
+  }
+  
+  .dropdown-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown-menu li {
+    margin: 10px 0;
+  }
+  
+  .dropdown-menu a {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .dropdown-menu a:hover {
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff;
+  }
+  .dropdown-menu .ai-tools {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+  }
+  
+
+  .floating-text {
+    font-size: 24px;
+    animation: float 2s ease-in-out infinite;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+    position: relative;
+    right: 370px;
+    bottom: 170px;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
