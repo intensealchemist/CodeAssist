@@ -1,0 +1,20 @@
+# Node.js dependencies  
+node_modules/  
+
+# Environment variables  
+.env  
+
+# Build files  
+dist/  
+build/  
+
+# Python cache  
+__pycache__/  
+*.pyc  
+*.pyo  
+*.pyd  
+
+# System-specific files  
+*.swp  # Vim swap files  
+*.swo  
+*.bak  # Backup files  
