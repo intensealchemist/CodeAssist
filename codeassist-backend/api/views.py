@@ -18,13 +18,13 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
 
-GEMINI_API_KEY = "YOUR API KEY"
+GEMINI_API_KEY = "YOUR API KEY  "
 genai.configure(api_key=GEMINI_API_KEY)
 
 def query_mistral(prompt, timeout=5):
     command = [
-        "/home/atul/CodeAssist/llama.cpp/build/bin/llama-cli",
-        "-m", "/home/atul/CodeAssist/llama.cpp/mistral-7b-v0.1.Q4_K_M.gguf",
+        "",
+        "-m", "",
         "-p", prompt,
         "-n", "200",
         "--ctx-size", "2048"
